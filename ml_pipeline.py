@@ -30,7 +30,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 # ── Paths ────────────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
-DATA_PATH = ROOT / "final_merged.csv"
+DATA_PATH = ROOT / "data" / "derived-data" / "final_merged.csv"
 OUTPUT_DIR = ROOT / "outputs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 

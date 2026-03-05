@@ -1,7 +1,19 @@
-\report card
-x_column_candidates.json
-x_column_mapping.csv
-x_school_variables_long.csv
-.claude
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# OS
 .DS_Store
+
+# IDE
 .claude/
+
+# Data (large files not tracked)
+report card/
+
+# Intermediate data files
+data/x_column_candidates.json
+data/x_column_mapping.csv
+data/x_school_variables_long.csv
