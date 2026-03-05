@@ -19,17 +19,18 @@ from datetime import datetime
 ```
 
 ```{python}
-DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Final_Data")
-demo = pd.read_csv(os.path.join(DATA, "cook_county_high_school_demographics.csv"))
-transport = pd.read_csv(os.path.join(DATA,'CTA_-_Bus_Routes_20260129.csv'))
-academic = pd.read_csv(os.path.join(DATA,"panel_yx_highschools_base_new.csv"))
-cook = gpd.read_file(os.path.join(DATA,'cook_county/PVS_25_v2_tracts2020_17031.shp'))
-income = pd.read_csv(os.path.join(DATA,'cook_tract_income_v7_2016_2024.csv'))
-desert = pd.read_csv(os.path.join(DATA,'cook_food_access_2019.csv'))
-seg = pd.read_csv(os.path.join(DATA,'school_segregation_all_final.csv'))
+RAW = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "raw-data", "Final_data")
+DERIVED = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "derived-data")
+demo = pd.read_csv(os.path.join(RAW, "cook_county_high_school_demographics.csv"))
+transport = pd.read_csv(os.path.join(RAW,'CTA_-_Bus_Routes_20260129.csv'))
+academic = pd.read_csv(os.path.join(RAW,"panel_yx_highschools_base_new.csv"))
+cook = gpd.read_file(os.path.join(RAW,'cook_county/PVS_25_v2_tracts2020_17031.shp'))
+income = pd.read_csv(os.path.join(RAW,'cook_tract_income_v7_2016_2024.csv'))
+desert = pd.read_csv(os.path.join(RAW,'cook_food_access_2019.csv'))
+seg = pd.read_csv(os.path.join(RAW,'school_segregation_all_final.csv'))
 
-school_loc = gpd.read_file(os.path.join(DATA,'Public_School_Locations_2021-22.geojson'))
-df = pd.read_csv(os.path.join(DATA,'final_merged.csv'))
+school_loc = gpd.read_file(os.path.join(RAW,'Public_School_Locations_2021-22.geojson'))
+df = pd.read_csv(os.path.join(DERIVED,'final_merged.csv'))
 ```
 
 ```{python}

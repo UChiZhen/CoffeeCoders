@@ -12,7 +12,7 @@ from shapely.geometry import Point
 import requests
 from datetime import datetime
 
-DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Final_Data")
+DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "raw-data", "Final_data")
 demo = pd.read_csv(os.path.join(DATA, "cook_county_high_school_demographics.csv"))
 transport = pd.read_csv(os.path.join(DATA,'CTA_-_Bus_Routes_20260129.csv'))
 academic = pd.read_csv(os.path.join(DATA,"panel_yx_highschools_base_new.csv"))
@@ -208,4 +208,4 @@ rename_map = {
 }
 merged_clean = merged_clean.rename(columns=rename_map)
 
-merged_clean.to_csv('final_merged.csv', index=False)
+merged_clean.to_csv(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'derived-data', 'final_merged.csv'), index=False)
