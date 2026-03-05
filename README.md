@@ -35,11 +35,11 @@ The data processing flow is as follows:
 
 1. **`preprocessing.py`** — Cleans all raw data from `data/raw-data/` and merges into `data/derived-data/final_merged.csv`
 2. **`ml_pipeline.py`** — Runs the ElasticNet model and outputs coefficients to `outputs/`
-3. **`final_project.qmd`** — Writeup with static visualizations
+3. **`writeup-alphabet.qmd`** — Writeup with static visualizations
 
 ## Streamlit Dashboard
 
-**Dashboard link:** https://finalcoffee.streamlit.app/
+**Dashboard link:** https://coffinatedcoders.streamlit.app/
 
 > **Note:** Streamlit Community Cloud apps need to be "woken up" if they have not been run in the last 24 hours. This is normal Streamlit behavior, not a bug.
 
@@ -54,7 +54,7 @@ CoffeeCoders/
 ├── streamlit-app/         # Streamlit dashboard code
 ├── preprocessing.py       # Data cleaning and merging
 ├── ml_pipeline.py         # ElasticNet ML pipeline
-├── final_project.qmd      # Writeup (Quarto)
+├── writeup-alphabet.qmd   # Writeup (Quarto)
 ├── requirements.txt       # Python dependencies
 └── .gitignore
 ```

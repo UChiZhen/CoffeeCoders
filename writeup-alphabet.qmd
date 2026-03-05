@@ -1,6 +1,11 @@
 ---
 title: "Write-Up"
 format:
+  html:
+    toc: true
+    number-sections: true
+    fig-cap-location: bottom
+    embed-resources: true
   pdf:
     toc: true
     number-sections: true
@@ -27,7 +32,7 @@ import plotly.graph_objects as go
 
 ```{python}
 #| echo: false
-DATA = os.path.join(os.getcwd(), "Final_Data")
+DATA = os.path.join(os.getcwd(), "data", "raw-data", "Final_data")
 demo = pd.read_csv(os.path.join(DATA, "cook_county_high_school_demographics.csv"))
 transport = pd.read_csv(os.path.join(DATA,'CTA_-_Bus_Routes_20260129.csv'))
 academic = pd.read_csv(os.path.join(DATA,"panel_yx_highschools_base_new.csv"))
@@ -37,7 +42,7 @@ desert = pd.read_csv(os.path.join(DATA,'cook_food_access_2019.csv'))
 seg = pd.read_csv(os.path.join(DATA,'school_segregation_all_final.csv'))
 
 school_loc = gpd.read_file(os.path.join(DATA,'Public_School_Locations_2021-22.geojson'))
-df = pd.read_csv(os.path.join(DATA,'final_merged.csv'))
+df = pd.read_csv(os.path.join(os.getcwd(), 'data', 'derived-data', 'final_merged.csv'))
 ```
 
 ```{python}
@@ -171,7 +176,7 @@ plt.show()
 ```{python}
 #| echo: false
 df["income_quintile"] = pd.qcut(
-    df['median_hh_income'].rank(method="first"),   # rank first to handle ties
+    df['x_median_hh_income'].rank(method="first"),   # rank first to handle ties
     5,
     labels=["Q1 (Lowest)", "Q2", "Q3", "Q4", "Q5 (Highest)"],
 )
@@ -262,7 +267,7 @@ We can see that math scores have a positive strong relationship with the number 
 #| dpi: 300
 plot_scatter_with_ols(
     df=df,
-    x_col="total_n_hh",
+    x_col="x_total_n_hh",
     y_col="y_math_prof",
     x_label="Total Households (Tract)",
     y_label="Post-Test Math Score",
