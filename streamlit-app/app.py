@@ -19,8 +19,8 @@ import streamlit as st
 from scipy.stats import pearsonr
 
 # ── Paths ────────────────────────────────────────────────────────────
-ROOT = Path(__file__).resolve().parent
-DATA_PATH = ROOT / "final_merged.csv"
+ROOT = Path(__file__).resolve().parent.parent
+DATA_PATH = ROOT / "data" / "derived-data" / "final_merged.csv"
 COEF_PATH = ROOT / "outputs" / "elasticnet_coefficients.json"
 
 # ── Human-readable labels ────────────────────────────────────────────
