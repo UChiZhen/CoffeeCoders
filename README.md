@@ -8,6 +8,8 @@ The Coffee Coders are made up of two groups from the University of Chicago Harri
 
 **Coffee Coders Group 49:** Amanda Gu (AmandaAtHarris) & Zhen Zang (UChiZhen)
 
+**Repo link for group 49:** https://github.com/UChiZhen/CoffeeCoders
+
 ## Research Question
 
 This project uses data to explore education outcomes across Cook County using data from 2018-2024.
