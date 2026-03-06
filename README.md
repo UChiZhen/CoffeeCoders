@@ -35,7 +35,8 @@ The data processing flow is as follows:
 
 1. **`preprocessing.py`** — Cleans all raw data from `data/raw-data/` and merges into `data/derived-data/final_merged.csv`
 2. **`ml_pipeline.py`** — Runs the ElasticNet model and outputs coefficients to `outputs/`
-3. **`writeup-alphabet.qmd`** — Writeup with static visualizations
+3. **`app.py`** - streamlit run for the data visualization
+4. **`final_project.qmd`** — Writeup with static visualizations
 
 ## Streamlit Dashboard
 
